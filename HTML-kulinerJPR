@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuliner Jepara</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 class="kiri">Makanan, Minuman, & Jajanan Khas Jepara</h1>
+      <nav class="kanan">
+        <a href="#home">Beranda</a>
+        <a href="#makanan">Makanan</a>
+        <a href="#minuman">Minuman</a>
+        <a href="#jajanan">Jajanan</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Selamat datang di Jepara</h1>
+      <p>Jelajahi kelezatan kuliner khas Jepara yang menggugah selera</p>
+    </section>
+
+    <!-- Daftar Makanan -->
+    <section id="makanan" class="container">
+      <h2>Makanan Khas Jepara</h2>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/12/14/1261998360.jpeg"
+            alt="Horog-horog"
+          />
+          <h3>Horog-horog</h3>
+          <p>
+            Makanan dari tepung pohon aren, biasanya dimakan dengan sate, bakso,
+            atau opor.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://img-global.cpcdn.com/recipes/14102a1187f0ddd5/751x532cq70/pindang-serani-khas-jepara-foto-resep-utama.jpg"
+            alt="Pindang Serani"
+          />
+          <h3>Pindang Serani</h3>
+          <p>Ikan segar dimasak dengan kuah bening asam pedas yang khas.</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://gacasshop.com/wp-content/uploads/2022/02/Opor-Panggang.jpg"
+            alt="Opor Jepara"
+          />
+          <h3>Opor Jepara</h3>
+          <p>
+            Opor ayam khas Jepara dengan bumbu rempah lengkap, gurih dan nikmat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar Minuman -->
+    <section id="minuman" class="container">
+      <h2>Minuman Khas Jepara</h2>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.TqWIyV1kQb_j2GDLtJq87QHaE8?pid=Api&P=0&h=180"
+            alt="Gempol Pleret"
+          />
+          <h3>Gempol Pleret</h3>
+          <p>
+            Minuman khas yang segar, dibuat dari adonan tepung beras dan santan.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://tse2.mm.bing.net/th/id/OIP.Y70S-7hoR4B4m_lXut5wXQHaFP?pid=Api&P=0&h=180"
+            alt="Adon Adon Coro"
+          />
+          <h3>Adon Adon Coro</h3>
+          <p>
+            Minuman khas yang segar, dibuat dari adonan tepung beras dan santan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar Jajanan -->
+    <section id="jajanan" class="container">
+      <h2>Jajanan Khas Jepara</h2>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://tse3.mm.bing.net/th/id/OIP.HxSdp_6BEc5-Qm_Tzjac2QHaE8?pid=Api&P=0&h=180"
+            alt="Klepon Jepara"
+          />
+          <h3>Klepon</h3>
+          <p>
+            Jajanan tradisional berisi gula merah cair, berbalut kelapa parut.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.zUf2nB_Dwars28Npyj4CrwHaE6?pid=Api&P=0&h=180"
+            alt="Rondho Royal"
+          />
+          <h3>Rondho Royal</h3>
+          <p>Tape yang digoreng dan dilapisi adonan tepung.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="about">
+      <h2>Deskripsi</h2>
+      <p>✨ Rasakan Kelezatan Khas Jepara! ✨</p>
+      <p>
+        Jepara bukan hanya terkenal dengan ukiran kayunya, tapi juga surganya
+        kuliner! Hangatnya Soto Jepara dengan koya udang yang gurih. Segarnya
+        Pindang Serani, olahan ikan kuah bening asam yang bikin nagih. Uniknya
+        Horok-horok kenyal, pasangan pas untuk sate kikil. Manis legitnya Carang
+        Madu dan renyahnya Rondho Royal yang bikin nggak bisa berhenti ngemil.
+        Lengkap dengan nikmatnya Kopi Jepara dari lereng Muria, teman setia
+        setiap momen.
+      </p>
+
+      <p>
+        🌿 Semua cita rasa ini adalah warisan kuliner pesisir yang siap
+        memanjakan lidah Anda.
+      </p>
+      <p>
+        Ayo dukung kuliner lokal, nikmati makanan, minuman, dan jajanan khas
+        Jepara—karena sekali coba, pasti ingin kembali lagi!
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Kuliner Jepara | @alexander</p>
+    </footer>
+  </body>
+</html>
