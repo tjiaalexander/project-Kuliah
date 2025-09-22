@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: url(https://getlost.id/wp-content/uploads/2019/03/shutterstock_1301358487.jpg)
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #008080;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1.kiri {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+}
+
+header nav.kanan {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://asset.kompas.com/crops/x8Y1FSyVi0xXv4_cjCYoFP5kgC4=/102x71:975x650/750x500/data/photo/2022/07/16/62d1eb5c9f1c4.jpg")
+    no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px black;
+  animation: scroll;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* Container */
+.container {
+  padding: 40px;
+  text-align: center;
+  
+}
+
+.container h2 {
+  margin: 20px auto;       /* bikin box ke tengah */
+  color: black;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: fit-content;  /* biar ukuran sesuai isi */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  text-align: center;      /* teks di tengah */
+}
+  
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+/* Tentang */
+.about {
+  background: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #008080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
