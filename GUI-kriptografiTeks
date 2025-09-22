@@ -1,0 +1,92 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def vigenere_encrypt(text, key):
+    text = text.upper()
+    key = key.upper()
+    encrypted = ""
+    key_index = 0
+
+    for char in text:
+        if char.isalpha():
+            shift = ord(key[key_index]) - ord('A')
+            encrypted += chr(((ord(char) - ord('A') + shift) % 26) + ord('A'))
+            key_index = (key_index + 1) % len(key)
+        else:
+            encrypted += char
+    return encrypted
+
+def vigenere_decrypt(text, key):
+    text = text.upper()
+    key = key.upper()
+    decrypted = ""
+    key_index = 0
+
+    for char in text:
+        if char.isalpha():
+            shift = ord(key[key_index]) - ord('A')
+            decrypted += chr(((ord(char) - ord('A') - shift) % 26) + ord('A'))
+            key_index = (key_index + 1) % len(key)
+        else:
+            decrypted += char
+    return decrypted
+
+#GUI
+def encrypt_text():
+    text = entry_text.get("1.0", tk.END).strip()
+    key = entry_key.get().strip()
+
+    if not text or not key:
+        messagebox.showwarning("Error", "Teks dan kunci tidak boleh kosong!")
+        return
+
+    encrypted = vigenere_encrypt(text, key)
+    output_text.delete("1.0", tk.END)
+    output_text.insert(tk.END, encrypted)
+
+def decrypt_text():
+    text = entry_text.get("1.0", tk.END).strip()
+    key = entry_key.get().strip()
+
+    if not text or not key:
+        messagebox.showwarning("Error", "Teks dan kunci tidak boleh kosong!")
+        return
+
+    decrypted = vigenere_decrypt(text, key)
+    output_text.delete("1.0", tk.END)
+    output_text.insert(tk.END, decrypted)
+
+#SETUPP
+window = tk.Tk()
+window.title("Aplikasi Kriptografi - Vigenère Cipher")
+window.geometry("500x400")
+
+#input
+label_text = tk.Label(window, text="Masukkan Teks:")
+label_text.pack()
+entry_text = tk.Text(window, height=5, width=50)
+entry_text.pack()
+
+#key
+label_key = tk.Label(window, text="Masukkan Kunci:")
+label_key.pack()
+entry_key = tk.Entry(window, width=30)
+entry_key.pack()
+
+#button
+frame_buttons = tk.Frame(window)
+frame_buttons.pack(pady=10)
+
+btn_encrypt = tk.Button(frame_buttons, text="Encrypt", command=encrypt_text)
+btn_encrypt.grid(row=0, column=0, padx=10)
+
+btn_decrypt = tk.Button(frame_buttons, text="Decrypt", command=decrypt_text)
+btn_decrypt.grid(row=0, column=1, padx=10)
+
+#output
+label_output = tk.Label(window, text="Hasil:")
+label_output.pack()
+output_text = tk.Text(window, height=5, width=50)
+output_text.pack()
+
+window.mainloop()
