@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Nilai</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 600px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+      }
+      td,
+      th {
+        border: 1px solid #333;
+        padding: 8px;
+      }
+      input[type="text"] {
+        width: 95%;
+        padding: 5px;
+      }
+      .btn {
+        padding: 8px 15px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">Form Input Nilai</h2>
+    <form id="nilaiForm">
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td><input type="text" id="nama" required /></td>
+        </tr>
+        <tr>
+          <td>NIM</td>
+          <td><input type="text" id="nim" required /></td>
+        </tr>
+        <tr>
+          <td>Jurusan</td>
+          <td><input type="text" id="jurusan" required /></td>
+        </tr>
+        <tr>
+          <td>Nilai Tugas</td>
+          <td><input type="text" id="tugas" required /></td>
+        </tr>
+        <tr>
+          <td>Nilai UTS</td>
+          <td><input type="text" id="uts" required /></td>
+        </tr>
+        <tr>
+          <td>Nilai UAS</td>
+          <td><input type="text" id="uas" required /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="submit" class="btn">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <h2 style="text-align: center">Hasil Input</h2>
+    <table id="hasilTable">
+      <tr>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Jurusan</th>
+        <th>Nilai Tugas</th>
+        <th>Nilai UTS</th>
+        <th>Nilai UAS</th>
+      </tr>
+    </table>
+
+    <script>
+      document
+        .getElementById("nilaiForm")
+        .addEventListener("submit", function (e) {
+          event.preventDefault(); // supaya tidak reload halaman
+
+          // ambil nilai input
+          const nama = document.getElementById("nama").value;
+          const nim = document.getElementById("nim").value;
+          const jurusan = document.getElementById("jurusan").value;
+          const tugas = document.getElementById("tugas").value;
+          const uts = document.getElementById("uts").value;
+          const uas = document.getElementById("uas").value;
+
+          // buat baris baru di tabel hasil
+          const table = document.getElementById("hasilTable");
+          const row = table.insertRow();
+
+          row.insertCell(0).innerText = nama;
+          row.insertCell(1).innerText = nim;
+          row.insertCell(2).innerText = jurusan;
+          row.insertCell(3).innerText = tugas;
+          row.insertCell(4).innerText = uts;
+          row.insertCell(5).innerText = uas;
+
+          // reset form setelah submit
+          document.getElementById("nilaiForm").reset();
+        });
+    </script>
+  </body>
+</html>
